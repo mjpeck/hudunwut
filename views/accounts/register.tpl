@@ -19,7 +19,7 @@
 
 <header class="app-header">
   <div class="row">
-    <div class="small-8 columns label text-left">Hudunwut</div>
+    <div class="small-8 columns label text-left"><a href="/">Hudunwut</a></div>
     <div class="small-4 columns">
       <div class="row">
         <div class="small-6 columns label">Log in</div>
@@ -30,23 +30,12 @@
 </header>
 
 <div class="row">
-  <div class="small-8 columns text-left no-padding">
-    <h2>Progress, Blah Blah</h2>
-    <p class="lead-in">Reply to your mom with a little snippet saying you accomplished something.</p>
-    <p class="lead-in">It's that simple. Mom will get your note.</p>
-  </div>
+  <div class="large-offset-3 large-6 columns text-center no-padding">
+    <h2>Almost there!</h2>
+    <p>Now, check your email at {{ .email }}.</p>
 
-  <div class="small-4 columns no-padding">
-    <form action="/accounts/register" method="POST">
-      <div class="large-12 columns">
-        <p></p>
-      </div>
-      <div class="large-12 columns">
-        <input type="text" name="email" placeholder="name@company.com" />
-      </div>
-      <div class="large-12 columns">
-        <button class="button expand">Sign up free</button>
-      </div>
+    <p>We sent an email with a confirmation link to <a href="mailto:{{ .email }}">{{ .email }}</a>. Please check your email and click on the link to confirm that the email address is yours.</p>
+    <p>Wrong email address? <a href="/accounts/register">Go back &#187;</p>
   </div>
 </div>
 
